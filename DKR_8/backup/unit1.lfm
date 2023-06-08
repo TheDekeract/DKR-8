@@ -1,0 +1,184 @@
+object Form1: TForm1
+  Left = 553
+  Height = 362
+  Top = 285
+  Width = 696
+  Caption = 'Калькулятор процентов'
+  ClientHeight = 362
+  ClientWidth = 696
+  Constraints.MaxHeight = 417
+  Constraints.MaxWidth = 708
+  Constraints.MinHeight = 362
+  Constraints.MinWidth = 598
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
+  object edtPrincipal: TEdit
+    AnchorSideRight.Control = edtRate
+    Left = 258
+    Height = 27
+    Top = 16
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Right = 18
+    MaxLength = 10
+    NumbersOnly = True
+    OnKeyPress = edtPrincipalKeyPress
+    TabOrder = 0
+  end
+  object edtRate: TEdit
+    AnchorSideRight.Control = edtTime
+    AnchorSideBottom.Control = memResult
+    Left = 258
+    Height = 27
+    Top = 56
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Right = 25
+    BorderSpacing.Bottom = 19
+    MaxLength = 10
+    NumbersOnly = True
+    OnKeyPress = edtRateKeyPress
+    TabOrder = 1
+  end
+  object edtTime: TEdit
+    Left = 258
+    Height = 27
+    Top = 90
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Bottom = 16
+    MaxLength = 10
+    NumbersOnly = True
+    OnKeyPress = edtTimeKeyPress
+    TabOrder = 2
+  end
+  object btnCalculate: TButton
+    Left = 536
+    Height = 37
+    Top = 65
+    Width = 148
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Посчитать'
+    OnClick = btnCalculateClick
+    TabOrder = 3
+  end
+  object cbxCalculationType: TComboBox
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Side = asrCenter
+    Left = 258
+    Height = 23
+    Top = 129
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    DoubleBuffered = True
+    ItemHeight = 15
+    ItemWidth = 20
+    ParentDoubleBuffered = False
+    ReadOnly = True
+    TabOrder = 4
+  end
+  object memResult: TMemo
+    AnchorSideRight.Control = cbxCalculationType
+    AnchorSideBottom.Control = btnCalculate
+    Left = 210
+    Height = 40
+    Top = 232
+    Width = 261
+    Anchors = []
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object btnClose: TBitBtn
+    Left = 536
+    Height = 37
+    Top = 114
+    Width = 148
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Выход'
+    ModalResult = 3
+    OnClick = btnCloseClick
+    TabOrder = 6
+  end
+  object LabelPrincipal: TLabel
+    Left = 22
+    Height = 26
+    Top = 16
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Bottom = 21
+    Caption = 'Начальная сумма (в руб.)'
+    Color = clWhite
+    Font.Height = 16
+    ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    Transparent = False
+  end
+  object LabelRate: TLabel
+    AnchorSideBottom.Control = edtRate
+    Left = 22
+    Height = 24
+    Top = 54
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Bottom = 17
+    Caption = 'Процентная ставка (в %)'
+    Color = clDefault
+    ParentColor = False
+    Transparent = False
+  end
+  object LabelTime: TLabel
+    AnchorSideBottom.Control = edtTime
+    Left = 22
+    Height = 26
+    Top = 88
+    Width = 162
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Bottom = 15
+    Caption = 'Время (в годах)'
+    Color = clDefault
+    ParentColor = False
+    Transparent = False
+  end
+  object LabelProcent: TLabel
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = cbxCalculationType
+    AnchorSideBottom.Side = asrCenter
+    Left = 22
+    Height = 26
+    Top = 125
+    Width = 161
+    Anchors = []
+    AutoSize = False
+    BorderSpacing.Bottom = 10
+    Caption = 'Проценты'
+    Color = clDefault
+    ParentColor = False
+    Transparent = False
+  end
+  object btnClear: TButton
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Side = asrCenter
+    Left = 536
+    Height = 37
+    Top = 16
+    Width = 148
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Очистить'
+    OnClick = btnClearClick
+    TabOrder = 7
+  end
+end
